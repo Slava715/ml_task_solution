@@ -2,24 +2,24 @@ Clone progect
   git clone https://github.com/Slava715/ml_task_solution
   
 From asr example api downald models on this link
-  https://drive.google.com/file/d/1XFnxAnBJI2DJYwJYA7Ijba2kZLwa2jDy/view?usp=sharing
+  > https://drive.google.com/file/d/1XFnxAnBJI2DJYwJYA7Ijba2kZLwa2jDy/view?usp=sharing
   
-  Unpack models.tar.gz on ml_task_solution/asr folder
-    tar -xvf models.tar.gz
+  > Unpack models.tar.gz on ml_task_solution/asr folder
+  >> tar -xvf models.tar.gz
     
 Run asr example api
-  cd ml_task_solution/asr
-  docker-compose build
-  docker-compose up
+  > cd ml_task_solution/asr
+  > docker-compose build
+  > docker-compose up
   
 Run ner example api
-  cd ml_task_solution/ner
-  docker-compose build
-  docker-compose up
+  > cd ml_task_solution/ner
+  > docker-compose build
+  > docker-compose up
   
 Run test scripts to see how it works
-  pip3 install pydub
-  pip3 install requests
+  > pip3 install pydub
+  > pip3 install requests
   
   python3 test_ner.py "Привет меня зовут Георгий. Мне наскучил ваш грустный мир. Поэтому сегодня вечером в 22 часа 32 минуты хочу улететь на Марс лежи на    диване. Ведь говорят, что на марсе классно."
   > {'response_code': 'ok', 'result': [{'B-PERSON': 'Георгий'}, {'B-TIME': 'сегодня'}, {'B-TIME': 'вечером'}, {'B-TIME': '22'}, {'I-TIME': 'часа'}, {'I-TIME': '32'}, {'I-TIME': '   минуты'}, {'B-LOC': 'Марс'}]}
